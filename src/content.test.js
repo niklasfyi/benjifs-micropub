@@ -83,10 +83,8 @@ Lorem ipsum dolor sit amet,\r\nconsectetur adipiscing elit\n`
 			delete jf2['mp-slug']
 			jf2['watch-of'] = {
 				type: 'h-cite',
-				properties: {
-					name: 'Star Wars',
-					published: 1977,
-				},
+				name: 'Star Wars',
+				published: 1977,
 			}
 			assert.equal(generateSlug('watch', jf2, '1234'), '1234-star-wars-1977')
 		})

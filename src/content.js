@@ -20,11 +20,8 @@ export const generateSlug = (type, jf2, prefix) => {
 		slug.push(jf2.name)
 	} else {
 		const cite = jf2['watch-of'] || jf2['read-of'] || jf2['listen-of'] || jf2['play-of']
-		if (cite && cite.properties) {
-			const { name, published } = cite.properties
-			if (name) slug.push(name)
-			if (published) slug.push(published)
-		}
+		if (cite?.name) slug.push(cite.name)
+		if (cite?.published) slug.push(cite.published)
 	}
 	return slugify(slug.join('-'))
 }
