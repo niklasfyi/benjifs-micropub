@@ -11,5 +11,6 @@ export const postTypes = data => {
 	if (data['read-of']) return 'read'
 	if (data['listen-of']) return 'listen'
 	if (data['play-of']) return 'play'
+	if (data['checkin']) return 'checkin'
 	return 'note'
 }
