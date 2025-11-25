@@ -5,12 +5,12 @@ export const postTypes = data => {
 	if (data['repost-of']) return 'repost'
 	if (data['like-of']) return 'like'
 	if (data['bookmark-of']) return 'bookmark'
+	if (data['checkin']) return 'checkin'
 	if (data['photo']) return 'photo'
 	if (data['name']) return 'article'
 	if (data['watch-of']) return 'watch'
 	if (data['read-of']) return 'read'
 	if (data['listen-of']) return 'listen'
 	if (data['play-of']) return 'play'
-	if (data['checkin']) return 'checkin'
 	return 'note'
 }
